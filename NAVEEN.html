@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAVEEN</title>
+  <link rel="stylesheet" href="NAVEEN.css" />
+</head>
+<body>
+  <div class="heart-cloud" aria-hidden="true">
+    <span class="heart heart1"></span>
+    <span class="heart heart2"></span>
+    <span class="heart heart3"></span>
+    <span class="heart heart4"></span>
+    <span class="heart heart5"></span>
+    <span class="heart heart6"></span>
+  </div>
+  <main class="container">
+    <section class="card">
+      <div class="hero">
+        <span class="badge">NAVEEN'S APOLOGY</span>
+        <h1>I'm sorry, and I mean it from the deepest part of my heart.</h1>
+        <p class="subtitle">This is a gentle message made with love, honesty, and a promise to be better.</p>
+      </div>
+
+      <div class="form-grid">
+        <input id="partnerName" type="text" placeholder="ENTER YOUR NAME PRINCESS" />
+        <button id="acceptBtn" class="small-btn accept">Accept</button>
+      </div>
+
+      <div class="message-box" id="messageBox" aria-live="polite">
+        <p class="hint">Press "Reveal apology" to share the sincere note.</p>
+      </div>
+
+      <div class="button-row-centered">
+        <button id="apologyBtn">Reveal apology</button>
+        <button id="resetBtn">Start again</button>
+      </div>
+
+      <div class="notes">
+        <p>Apology is stronger when it is real. I'm here to listen, understand, and show you how much you mean to me.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="codeModal" class="code-modal" style="display: none;">
+    <div class="code-modal-content">
+      <h2>Enter Personal Code</h2>
+      <input id="codeInput" type="password" placeholder="Enter code" />
+      <div class="code-modal-buttons">
+        <button id="codeSubmitBtn">Submit</button>
+        <button id="codeCloseBtn">Cancel</button>
+      </div>
+      <p id="codeError" class="code-error"></p>
+    </div>
+  </div>
+
+  <div id="errorModal" class="error-modal" style="display: none;">
+    <div class="error-modal-content">
+      <h2 class="error-title">ERROR</h2>
+      <p class="error-subtitle">you are not allowed</p>
+      <button id="errorCloseBtn" class="error-close-btn">Try Again</button>
+    </div>
+  </div>
+
+  <div id="apologyDisplay" class="apology-display" style="display: none;">
+    <div class="apology-content" id="apologyContent"></div>
+  </div>
+
+  <div id="pinkDisplay" class="pink-display" style="display: none;">
+    <div class="pink-inner">
+      <div class="video-wrap">
+        <video id="apologyVideo" controls playsinline></video>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0.8rem; align-items:flex-start;">
+        <div class="video-text" id="videoText" aria-live="polite"></div>
+        <div id="videoStatus" class="video-status" aria-live="polite"></div>
+      </div>
+    </div>
+    <button id="pinkCloseBtn" class="small-btn" style="position: absolute; top: 18px; right: 18px;">Close</button>
+  </div>
+
+  <!-- hidden file picker to allow selecting a local video file (avoids file:// restrictions) -->
+  <input id="videoFileInput" type="file" accept="video/*" style="display: none;" />
+
+  <audio id="bgmAudio" preload="auto"></audio>
+
+  <div id="celebrate" class="celebrate" aria-hidden="true">
+    <div class="celebrate-inner">
+      <img id="celebrateImg" src="celebrate.jpg" alt="celebration" />
+      <div class="celebrate-hearts" aria-hidden="true">
+        <span class="cheart c1"></span>
+        <span class="cheart c2"></span>
+        <span class="cheart c3"></span>
+        <span class="cheart c4"></span>
+        <span class="cheart c5"></span>
+      </div>
+      <div id="celebrateMsg" class="celebrate-msg"><span>WELCOME TO MY HEART BABE</span></div>
+    </div>
+  </div>
+
+  <script src="NAVEEN.js"></script>
+</body>
+</html>
